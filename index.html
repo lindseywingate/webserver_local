@@ -1,0 +1,59 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<title>Campus Connection Jr.</title>
+</head>
+<body>
+<h1>Campus Connection Jr.</h1>
+<form action="cgi-bin/testscript.pl" method="post" name="displayclasses">
+    <h4>Search for a Class</h4>
+    <input type="text" name="class_search">
+    <input type="submit" id="general_button" value="Search">
+    <input type="reset" value="Clear">
+</form>
+<form action="changeclass.pl">
+    <h4>Edit an Existing Class</h4>
+    <input type="text" name="change_class">
+    <input type="submit" id="general_button"  value="Go">   
+    <input type="reset" value="Clear">
+</form>
+<button type="button" id="general_button">Display All Classes</button>
+<form method="post" action="addclass.pl">
+    <h4>Add a Class</h4>
+    <tr>
+        Class Name
+        <input type="text" name="classname">
+        ex: Perl
+    </tr>
+    <br>
+    <tr>
+        Department
+        <input type="text" name="department">
+        ex: Computer Science
+    </tr>
+    <br>
+    <tr>
+        Class Number
+        <input type="text" name="classnum">
+        ex: 260 
+    </tr>
+    <br>
+    <tr>
+        Grade Received
+        <input type="text" name="grade">
+        ex: A
+    </tr>
+    <br>
+    <tr>
+        Credits Received
+        <input type="text" name="credits">
+        ex: 3
+    </tr>
+    <br>
+    <input type="submit" id="general_button" value="Add">
+    <input type="submit" id="red_button" value="Clear Entries">
+<br><br>
+    <button type="button" id="general_button">View my Transcript</button>
+<br>
+</body>
+
