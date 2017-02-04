@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Campus Connection Jr.</h1>
-<form action="cgi-bin/testscript.pl" method="post" name="displayclasses">
+<form action="cgi-bin/first.cgi" method="post" name="displayclasses">
     <h4>Search for a Class</h4>
     <input type="text" name="class_search">
     <input type="submit" id="general_button" value="Search">
