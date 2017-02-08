@@ -13,11 +13,11 @@ $sth->execute() or die ("Cannot execute statement: ", $sth->errstr(), "\n");
 
 my @array;
 
-print "ID Name Department Grade Credits\n\n";
+print "Name Department Grade Credits ID\n\n";
 print br();
 while (@array = $sth->fetchrow_array() ) 
 {
-   printf "%2d %-10s %2s %2s %2d\n", @array;
+   printf "%10s %5s %2s %2s %2s %2d", @array;
    print br();
 }
 

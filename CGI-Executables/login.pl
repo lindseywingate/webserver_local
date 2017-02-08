@@ -6,7 +6,7 @@ print header(), start_html(-title=>"Sample login page", -BGCOLOR=>'ffffff' );
 
 print start_form (-method=>'post', -action=>'/cgi-bin/checkLoginInfo.pl');
 
-print "Log in to the ultra secure website", br, br;
+print "Welcome to Campus Connection - the simple way", br, br;
 
 print "Username", textfield (-name=>'txtUsername'), br, br;
 
