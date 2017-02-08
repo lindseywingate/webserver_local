@@ -12,23 +12,18 @@ my $password = param ('txtPassword');
 
 my $dbh = DBI->connect ("DBI:mysql:database=school;host=localhost", "root", "password") or die ("Couldn't make connection to database: $DBI:errstr");
 
-my $sth = $dbh->prepare ("SELECT * FROM tblusers where login = '$username' and password = '$password'") or die ("Cannot prepare statement.\n");
+my $sth = $dbh->prepare ("SELECT login, password from tblusers where login = '$username' and password = '$password'") or die ("Cannot prepare statement.\n");
 
 $sth->execute() or die ("Cannot execute statement: ", $sth->errstr(), "\n");
 
 my @array;
 
 while (@array = $sth->fetchrow_array() ) {
-	printf "%10s %10s", @array;
+	printf "%10s %10s %10s %10s", @array;
 	print br();
 }
 
 $dbh->disconnect();
 $sth->finish();
-
-if ($username eq "admin" && $password eq "password")
-{
-	print("HIIIII");
-}
 
 print end_form(), end_html();
