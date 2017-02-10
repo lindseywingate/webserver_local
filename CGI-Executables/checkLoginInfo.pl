@@ -1,24 +1,26 @@
-#!/usr/bin/perl -wT
+#!/usr/bin/perl
 
 use CGI qw(:standard);
 use DBI;
+use strict;
+use warnings;
 
-print header(), start_html();
+$query= new CGI;
 
 my $username = param ('txtUsername');
 my $password = param ('txtPassword');
 
-#here is where you would verify the username and password against a table in the database
+my $dbh = DBI->connect ("DBI:mysql:database=school;host=localhost", "root", "password");
+my $sth = $dbh->prepare ("SELECT count(*) from tblusers where login = '$username' and password = '$password'") or die ("Cannot prepare statement.\n");
 
-my $dbh = DBI->connect ("DBI:mysql:database=school;host=localhost", "root", "password") or die ("Couldn't make connection to database: $DBI:errstr");
-
-my $sth = $dbh->prepare ("SELECT * from tblusers where login = '$username' and password = '$password'") or die ("Cannot prepare statement.\n");
-
-$sth->execute() or die ("Cannot execute statement: ", $sth->errstr(), "\n");
+$sth->execute();
 
 my @array;
-@array = $sth->fetchrow_array();
 my $count = 0;
+my $cookie;
+@array = $sth->fetchrow_array();
+
+$sth->finish();
 
 #get amount of results from array
 foreach (@array) {
@@ -27,15 +29,14 @@ foreach (@array) {
 
 #if no results, user/password combo not found
 if($count < 1) {
-	print "not found"
+    my $cookie = $query->cookie(-name=>"mycookie",
+        -value=>'bestcookie=whitechocochip',
+        -expires=>'+1m',
+        -path=>'/');
+
+	print $query->header(-cookie=>$cookie);
+    print $query->start_html('My cookie program');
+    print $query->h3('The cookie has been SET!');
+
 }
-else {
-	print "found"
-}
 
-print @array;
-
-$dbh->disconnect();
-$sth->finish();
-
-print end_form(), end_html();

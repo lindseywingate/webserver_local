@@ -4,7 +4,7 @@ use CGI qw(:standard);
 
 print header(), start_html(-title=>"Sample login page", -BGCOLOR=>'ffffff' );
 
-print start_form (-method=>'post', -action=>'/cgi-bin/makecookiepractice.pl');
+print start_form (-method=>'post', -action=>'/cgi-bin/checklogin.pl');
 
 print "Welcome to Campus Connection - the simple way", br, br;
 
