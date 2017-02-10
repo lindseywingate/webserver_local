@@ -14,7 +14,7 @@ if ($username eq "admin" && $password eq "password")
 		-expires=>'+1m',
 		-path=>'/');
 
-	print redirect (-cookie=>$cookie, -location=>'/cgi-bin/verifyLogin.pl'), start_html(), end_html();
+	print redirect (-cookie=>$cookie, -location=>'/index.html.en'), start_html(), end_html();
 
 #	print $query->header(-cookie=>$cookie);
 #	print $query->start_html('My cookie program');
