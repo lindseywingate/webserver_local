@@ -1,14 +1,15 @@
 #!/usr/bin/perl
 
 use CGI qw(:standard);
-$query = new CGI;
+use CGI::Session;
+use File::Spec;
 use DBI;
 
 my $username = param ('txtUsername');
 my $password = param ('txtPassword');
 
 my $dbh = DBI->connect ("DBI:mysql:database=school;host=localhost", "root", "password");
-my $sth = $dbh->prepare ("SELECT count(*) from tblusers where login = '$username' and password = '$password'");
+my $sth = $dbh->prepare ("SELECT * from tblusers where login = '$username' and password = '$password'");
 
 $sth->execute();
 
@@ -21,22 +22,25 @@ foreach(@array) {
 	$count++;
 }	
 
-#here is where you would verify the username and password against a table in the database
-if ($count > 0)
+#if more than one result comes back, that means the user/password were found
+if ($count > 1)
 {
-	my $cookie = $query->cookie(-name=>"mycookie",
-		-value=>'bestcookie=whitechocochip',
-		-expires=>'+1m',
-		-path=>'/');
+	my $session = new CGI::Session(undef, undef, {Directory=>File::Spec->tmpdir()});
+	$session->param('loggedin', 'yes');
+	$session->param('username', $username);
+	$session->close();
+	
+	my $cookie = cookie (
+		-name => 'perl260',
+		-value => $session->id,
+		-expires=> '+1m' );
+	
+	print redirect (-cookie=>$cookie, -location=>'/cgi-bin/index.pl'), start_html(), end_html();
 
-	print redirect (-cookie=>$cookie, -location=>'/index.html.en'), start_html(), end_html();
-
-#	print $query->header(-cookie=>$cookie);
-#	print $query->start_html('My cookie program');
-#	print $query->h3('The cookie has been SET!');
 }
 else {
-	print $query->header();
+	print header(), start_html("Oops");
+	print "Your username or password is incorrect.", br;
+	print "Try logging in again ", a ( {-href=>'/cgi-bin/login.pl'}, "here"), br;
+	print end_html();	
 }
-	print $query->end_html;	
-

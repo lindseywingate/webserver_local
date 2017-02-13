@@ -1,10 +1,10 @@
-#!/usr/bin/perl -wT
+#!/usr/bin/perl
 
 use CGI qw(:standard);
 use CGI::Session;
 use File::Spec;
 
-#get the client-side cookie, the link to the server cookie
+#get the client cookie
 my $sessionID = cookie ('perl260');
 
 my $session = new CGI::Session (undef, $sessionID,  {Directory=>File::Spec->tmpdir() } );
@@ -23,8 +23,6 @@ if ($session->param ('loggedin'))
 else
 {
    print header(), start_html("Oops");
-   print "You don't haver permission to run this page", br;
-   print "Try logging in ", a ( {-href=>'/cgi-bin/getLoginInfo.pl'}, "here"), br;
    print end_html();
 }
 
