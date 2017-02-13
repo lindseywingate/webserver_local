@@ -12,7 +12,7 @@ if($session->param('loggedin')) {
 	my $cookie = cookie (-name=>'perl260',
                          -value => $session->id,
                          -expires => '+1m' );
-    print header(-cookie=>$cookie), start_html ();
+    print header(-cookie=>$cookie), start_html (-bgcolor=>'white');
     my $username = $session->param('username');
 
 	print " 
@@ -31,10 +31,15 @@ if($session->param('loggedin')) {
 	<hr>
 
 	<form method='post' action='edit.pl'>
-		<h4>Edit an Existing Class by Name</h4>
+		<h4>Edit an Existing Class by Name and Class Number</h4>
 		<tr>
 			Current Class Name
 			<input type='text' name='oldclassname'>
+		</tr>
+		<br>
+		<tr>
+			Current Class Number
+			<input type='text' name='oldclassnumber'>
 		</tr>
 		<br><br>
 		<b>New Class Information</b> <br>
@@ -121,6 +126,6 @@ if($session->param('loggedin')) {
 }
 else {
 	print header(), start_html("Error");
-	print "Your session has ended due to inactivity or never even began due to an incorrect password or username. Login again ", a({-href=>'/cgi-bin/login.pl'}), "here", br;
+	print "Your session has ended due to inactivity or an incorrect password or username. <br> Login again ", a({-href=>'/cgi-bin/login.pl'}), "here", br;
 	print end_html();
 }

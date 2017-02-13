@@ -8,6 +8,7 @@ print header(), start_html(-title=>"Sample login page", -BGCOLOR=>'ffffff' );
 
 my @param = param();
 my $oldclassname = param('oldclassname');
+my $oldclassnumber = param('oldclassnumber');
 my $classname = param('classname');
 my $department = param('department');
 my $classnum = param('classnum');
@@ -16,6 +17,8 @@ my $credits = param('credits');
 
 my $error = "";
 
+$error .= "Please enter the current class name.<br/>" if (!$oldclassname);
+$error .= "Please enter the current class number.<br/>"if (!$oldclassnumber);
 $error .= "Please enter the class name.<br/>" if (!$classname);
 $error .= "Please enter the department.<br/>" if (!$department);
 $error .= "Please enter the class number.<br/>" if (!$classnum);
@@ -28,7 +31,7 @@ if ($error) {
 
 my $dbh = DBI->connect ("DBI:mysql:database=school;host=localhost", "root", "password") or die ("Couldn't make connection to database: $DBI::errstr");
 
-my $sth = $dbh->prepare ("UPDATE tblclasses SET classname='$classname', department='$department', classnum='$classnum', grade='$grade', credits='$credits' WHERE classname = '$oldclassname';") or die ("Cannot prepare statement: ", $dbh->errstr(), "\n");
+my $sth = $dbh->prepare ("UPDATE tblclasses SET classname='$classname', department='$department', classnum='$classnum', grade='$grade', credits='$credits' WHERE classname = '$oldclassname' and classnum = '$oldclassnumber';") or die ("Cannot prepare statement: ", $dbh->errstr(), "\n");
 
 $sth->execute() or die ("Cannot execute statement: ", $sth->errstr(), "\n");
 

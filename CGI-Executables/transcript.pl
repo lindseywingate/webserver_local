@@ -84,7 +84,7 @@ print "<h4>Total Attempted Credits: $totalcredits </h4>";
 print "<h4>Total Passed Credits: $totalpassed </h4>";
 my $GPA = $tempGPA/$totalcredits;
 printf "<h4>GPA: %.3f</h4>", $GPA;
-print "<link rel='stylesheet' type='text/css' href='css/transcript.css'>";
+print "<link rel='stylesheet' type='text/css' href='css/index.css'>";
 
 $dbh->disconnect();
 $sth->finish();
