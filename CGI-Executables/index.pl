@@ -25,7 +25,7 @@ if($session->param('loggedin')) {
 		<h4>Search for a Class by Name or Department</h4>
 		<input type='text' name='search'>
 		<input type='submit' id='general_button' value='Search'>
-		<input type='reset' value='Clear'>
+		<input type='reset' id='clear' value='Clear'>
 	</form>
 	<br>
 	<hr>
@@ -34,7 +34,7 @@ if($session->param('loggedin')) {
 		<h4>Edit an Existing Class by Name</h4>
 		<tr>
 			Current Class Name
-			<input type='text' name='classname'>
+			<input type='text' name='oldclassname'>
 		</tr>
 		<br><br>
 		<b>New Class Information</b> <br>
@@ -69,12 +69,12 @@ if($session->param('loggedin')) {
 		</tr>
 		<br>
 		<input type='submit' id='general_button' value='Edit'>
-		<input type='submit' id='red_button' value='Clear Entries'>
+		<input type='reset' id='clear' value='Clear Entries'>
 	</form>
 	<br>
 	<hr>
 
-	<form method='post' action='addclass.pl'>
+	<form method='post' action='add.pl'>
 		<h4>Add a Class</h4>
 		<tr>
 			Class Name
@@ -107,7 +107,7 @@ if($session->param('loggedin')) {
 		</tr>
 		<br>
 		<input type='submit' id='general_button' value='Add'>
-		<input type='submit' id='red_button' value='Clear Entries'>
+		<input type='reset' id='clear' value='Clear Entries'>
 	</form>
 	<br><br>
 
