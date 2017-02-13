@@ -20,20 +20,60 @@ if($session->param('loggedin')) {
 	<title>Course System</title>
 	</head>
 	<body>
-	<h1>Campus Connection Jr.</h1>
+	<h1><u>Campus Connection</u></h1>
 	<form action='search.pl' method='post' name='search'>
-		<h4>Search for a Class</h4>
+		<h4>Search for a Class by Name or Department</h4>
 		<input type='text' name='search'>
 		<input type='submit' id='general_button' value='Search'>
 		<input type='reset' value='Clear'>
 	</form>
-	<form action='changeclass.pl'>
-		<h4>Edit an Existing Class</h4>
-		<input type='text' name='change_class'>
-		<input type='submit' id='general_button'  value='Go'>   
-		<input type='reset' value='Clear'>
+	<br>
+	<hr>
+
+	<form method='post' action='edit.pl'>
+		<h4>Edit an Existing Class by Name</h4>
+		<tr>
+			Current Class Name
+			<input type='text' name='classname'>
+		</tr>
+		<br><br>
+		<b>New Class Information</b> <br>
+		<tr>
+			Class Name
+			<input type='text' name='classname'>
+			ex: Perl
+		</tr>
+		<br>
+		<tr>
+			Department
+			<input type='text' name='department'>
+			ex: Computer Science
+		</tr>
+		<br>
+		<tr>
+			Class Number
+			<input type='text' name='classnum'>
+			ex: 260 
+		</tr>
+		<br>
+		<tr>
+			Grade Received
+			<input type='text' name='grade'>
+			ex: A
+		</tr>
+		<br>
+		<tr>
+			Credits Received
+			<input type='text' name='credits'>
+			ex: 3
+		</tr>
+		<br>
+		<input type='submit' id='general_button' value='Edit'>
+		<input type='submit' id='red_button' value='Clear Entries'>
 	</form>
-	<button type='button' id='general_button'>Display All Classes</button>
+	<br>
+	<hr>
+
 	<form method='post' action='addclass.pl'>
 		<h4>Add a Class</h4>
 		<tr>
@@ -70,6 +110,7 @@ if($session->param('loggedin')) {
 		<input type='submit' id='red_button' value='Clear Entries'>
 	</form>
 	<br><br>
+
 	<form method='get' action='transcript.pl'>
 		<button type='submit' id='general_button'>View my Transcript</button>
 	</form>

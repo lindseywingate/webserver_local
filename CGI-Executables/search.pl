@@ -18,7 +18,8 @@ my @array;
 my $count=0;
 print "
 <link rel='stylesheet' type='text/css' href='css/transcript.css'>
-<table><th>Transcript</th>";
+<h2>Class Search Results</h2>
+<table>";
 print "<tr><td><b>Name</td> <td><b>Department</td> <td><b>Class Code</td><td><b>Grade</td> <td><b>Credits</td> <td><b>ID</td></tr>";
 while (@array = $sth->fetchrow_array() ) 
 {
