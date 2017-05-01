@@ -1,0 +1,10 @@
+/*This is the css for the index.html page*/
+@font-face {
+	font-family: Sans-serif;
+}
+
+p, h3 {
+	font-family: "Arial", serif;
+}
+
+
