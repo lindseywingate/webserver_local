@@ -1,10 +1,49 @@
 /*This is the css for the map.html page*/
 @font-face {
-	font-family: Sans-serif;
+    font-family: daniel;
+    src: url(Daniel-Bold.otf);
 }
 
-p, h3 {
-	font-family: "Arial", serif;
+html {
+    font-family: daniel; /*I want to actually use Daniel-Bold.otf on the server*/
 }
 
+body {
+    background-color: black;
+/*  background-image: url("tornado.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+*/
+}
+
+h1 {
+	font-family: daniel;
+    font-size: 50px;
+    text-align: center;
+	color: white;
+}
+
+p {
+	font-size: 20px;
+}
+
+#map_canvas {
+	width: 60%;
+	height: 600px;
+	float: left;
+	z-index; 1;
+}
+
+#description {
+	width: 30%;
+	height: 600px;
+	color: #80CBC4;
+	background-color: rgba(0, 137, 123, 0.8);
+    border: 2px solid rgb(0, 137, 123);
+    -webkit-border-radius: 10px;
+	padding: 40px;
+	right: 20px;
+	float: right;
+}
 

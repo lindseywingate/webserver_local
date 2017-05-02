@@ -1,1 +1,18 @@
-<p>There are many different accomodations available.</p>
+<p>Please select your group size.
+<select id="groupsize">
+	<option value="single">single</option>
+	<option value="couple">couple</option>
+	<option value="family">family</option>
+</select><br>
+<p>Any pets?
+<select id="pets">
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+</select>
+<p>Select your situation
+<select id="situation">
+	<option value="">Displaced due to natural disaster</option>
+	<option value="">Family of a hospital patient</option>
+	<option value="">Stranded/Distressed Passenger</option>
+	<option value="">Other</option>
+</select>

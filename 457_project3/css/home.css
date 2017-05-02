@@ -39,7 +39,7 @@ p {
 	padding: 40px;
 	left: 50%;
 	transform: translate(-50%, 0);
-	top: 200px;
+	top: 100px;
 }
 
 input[type=submit] {

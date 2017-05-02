@@ -1,5 +1,6 @@
 /*This is the js file for the index.html page*/
 var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
+var home = 'http://www.iconhot.com/icon/png/token-dark/48/home-92.png';
 
 function getlocation() {
 	if(navigator.geolocation) {
@@ -21,14 +22,14 @@ function initialize(position) {
 	var mapOptions = {
 		zoom: 16,
 		center: position,
-		mapTypeId: google.maps.MapTypeId.TERRAIN,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
 	}
 
 	var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 	var userMarker = new google.maps.Marker({
 		position: position,
 		map: map,
-		icon: im,	
+		icon: home,	
 		title: "You are here!"
 	});
 }
