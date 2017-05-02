@@ -1,5 +1,5 @@
 function putneedtext() {
-	var xmlhttp:
+	var xmlhttp;
 	if(window.XMLHttpRequest) {
 		xmlhttp = new XMLHttpRequest();
 	}
@@ -8,15 +8,15 @@ function putneedtext() {
 	}
 	xmlhttp.onreadystatechange = function () {
 		if((xmlhttp.readyState==4) && (xmlhttp.status==200)) {
-			document.getElementById("explanation_insert").innerHTML=xml.http.responseText;
+			document.getElementById("explanation_insert").innerHTML=xmlhttp.responseText;
 		}
 	}
-	xmlhttp.open("GET", "needtext.txt", true);
+	xmlhttp.open("GET", "js/needtext.txt", true);
 	xmlhttp.send();
 }
 
 function putgivetext() {
-	var xmlhttp:
+	var xmlhttp;
 	if(window.XMLHttpRequest) {
 		xmlhttp = new XMLHttpRequest();
 	}
@@ -25,9 +25,9 @@ function putgivetext() {
 	}
 	xmlhttp.onreadystatechange = function () {
 		if((xmlhttp.readyState==4) && (xmlhttp.status==200)) {
-			document.getElementById("explanation_insert").innerHTML=xml.http.responseText;
+			document.getElementById("explanation_insert").innerHTML=xmlhttp.responseText;
 		}
 	}
-	xmlhttp.open("GET", "givetext.txt", true);
+	xmlhttp.open("GET", "js/givetext.txt", true);
 	xmlhttp.send();
 }
