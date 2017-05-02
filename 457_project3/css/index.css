@@ -1,12 +1,16 @@
 /*This is the css file for the landing page*/
+@font-face {
+	font-family: daniel;
+	src: url(Daniel-Bold.otf);
+}
 
 html {
-	font-family: "Arial"; /*I want to actually use Daniel-Bold.otf on the server*/
+	font-family: daniel; /*I want to actually use Daniel-Bold.otf on the server*/
 }
 
 body {
-	background-color: #004D40;
-/*	background-image: url("ocean.jpg");
+	background-color: black;
+/*	background-image: url("tornado.jpg");
 	background-repeat: no-repeat;
 	height: 100%;
 	background-position: center;
@@ -54,6 +58,7 @@ input[type=text], input[type=password] {
 }
 
 input[type=submit] {
+	font-family: daniel;
 	color: #80CBC4;
 	text-align: right !important;
 	font-size: 20px;
