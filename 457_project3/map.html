@@ -9,6 +9,24 @@
 <body onload="getlocation()">
 	<h1>Open Homes</h1>
 	<div id="map_canvas"></div>
+	<div id="criteria">
+		<h2>Search Criteria</h2>
+		<p>Group:</p>
+		<p>Pets:</p>
+		<h2>New Search</h2>
+		<p>Group: <select id="groupsize">
+			<option value="single">single</option>
+			<option value="couple">couple</option>
+			<option value="family">family</option>
+			<option value="multiplefamilies">multiple families</option>
+		</select></p>
+		<p>Pets:
+		<select id="pets">
+		    <option value="yes">Yes</option>
+		    <option value="no">No</option>
+		</select>
+		</p>	
+	</div>
 	<div id="description">
 		<p>When the map loads, click on the available home icons to see a description.</p>
 	</div>

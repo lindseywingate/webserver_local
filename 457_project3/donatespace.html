@@ -1,0 +1,29 @@
+<!--page for people to sign up to "donate" space-->
+
+<html>
+<head>
+	<script type="text/javascript" src="js/donatespace.js"></script>
+	<link href="css/donatespace.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<h1>Donate Space</h1>
+	<div id="page">
+		<div id="typeofspace">
+			<p>Please select one:</p>
+			<form action="">
+				<input type="checkbox" name="bedroom" value="bedroom">Bedroom</br>
+				<input type="checkbox" name="masterbed" value="masterbed">Bedroom with attached bathroom</br>
+				<input type="checkbox" name="apartment" value="apartment" onClick="aptbedrooms()">Entire Apartment</br>
+				<div id="aptbedrooms">
+				</div>
+				<input type="checkbox" name="house" value="house" onClick="housebedrooms()">Entire House</br>
+				<div id="housebedrooms">
+				</div>
+				<input type="submit">
+		</div>
+	</div><!--page-->	
+
+</body>
+</html>
+
+

@@ -3,6 +3,7 @@
 	<option value="single">single</option>
 	<option value="couple">couple</option>
 	<option value="family">family</option>
+	<option value="multiplefamilies">multiple families</option>
 </select><br>
 <p>Any pets?
 <select id="pets">

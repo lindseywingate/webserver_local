@@ -1,0 +1,29 @@
+/*This page contains the styles of the donatespace html page*/
+@font-face {
+	font-family: daniel;
+	src: url("Daniel-Bold.otf");
+}
+
+body {
+	background-color: black;
+	font-family: daniel;
+}
+
+h1 {
+	font-family: daniel;
+	text-align: center;
+	font-size: 50px;	
+	color: white;
+}
+
+#typeofspace {
+	color: #80CBC4;
+    background-color: rgba(0, 137, 123, 0.8);
+    border: 2px solid rgb(0, 137, 123);
+    -webkit-border-radius: 10px;
+    padding: 20px;
+    right: 20px;
+    float: left;
+	
+}
+

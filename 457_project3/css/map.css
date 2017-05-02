@@ -24,6 +24,10 @@ h1 {
 	color: white;
 }
 
+h2 {
+	text-decoration: underline;
+}
+
 p {
 	font-size: 20px;
 }
@@ -35,15 +39,28 @@ p {
 	z-index; 1;
 }
 
+#criteria {
+	width: 30%;
+	height: 50%;
+	color: #80CBC4;
+    background-color: rgba(0, 137, 123, 0.8);
+    border: 2px solid rgb(0, 137, 123);
+    -webkit-border-radius: 10px;
+	padding: 20px;
+    right: 20px;
+    float: right;
+}
+
 #description {
 	width: 30%;
-	height: 600px;
+	height: 40%;
 	color: #80CBC4;
 	background-color: rgba(0, 137, 123, 0.8);
     border: 2px solid rgb(0, 137, 123);
     -webkit-border-radius: 10px;
-	padding: 40px;
+	padding: 20px;
 	right: 20px;
 	float: right;
 }
+
 
