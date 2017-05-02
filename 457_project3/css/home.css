@@ -1,0 +1,55 @@
+/*This is the style page for the home page*/
+
+@font-face {
+    font-family: daniel;
+    src: url(Daniel-Bold.otf);
+}
+
+html {
+    font-family: daniel; /*I want to actually use Daniel-Bold.otf on the server*/
+}
+
+body {
+    background-color: black;
+/*  background-image: url("tornado.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+*/
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+	text-decoration: underline;
+}
+
+p {
+	font-size: 20px;
+}
+
+#text_stuff {
+    vertical-align: middle;
+    color: #80CBC4;
+	background-color: rgba(0, 137, 123, 0.8);
+    border: 2px solid rgb(0, 137, 123);
+    -webkit-border-radius: 10px;
+    position: absolute;
+	box-sizing: border-box;
+	padding: 40px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: 200px;
+}
+
+input[type=submit] {
+	font-family: daniel;
+	color: #80CBC4;
+	text-align: right !important;
+	font-size: 20px;
+	border: 2px solid #80CBC4;
+	-webkit-border-radius: 5px;
+	background: rgba(0, 0, 0, 0.0);
+}
+
+
