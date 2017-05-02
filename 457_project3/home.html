@@ -1,0 +1,22 @@
+<!--This is the home page that everyone sees once they are logged in-->
+
+<html>
+<head>
+	<link href="css/home.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/home.js"></script>
+</head>
+<body>
+	<div id="text_stuff">
+		<h1>Welcome</h1>
+		<p>I am looking...</p>
+		<form action="service.php">
+			<input type="radio" name="service" value="need" onClick="putneedtext()">for a place to stay</br>
+			<input type="radio" name="service" value="give" onClick="putgivetext()">to rent a space</br><br><br>
+			<input type="submit" value="Next" id="submit">
+		</form>
+		<div id="explanation_insert">
+		</div>
+	</div>
+</body>
+</html>
+

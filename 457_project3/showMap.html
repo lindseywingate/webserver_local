@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+ <body>
+  Click the button to display the map:  
+  <button onClick="getLocation( )">Display the Map!</button>
+  <p id="mapholder"></p>
+ 
+  <script>
+   var  mapholder = document.getElementById( "mapholder" );
+ 
+   function  getLocation( ) {
+    if ( navigator.geolocation )
+     navigator.geolocation.getCurrentPosition( showPosition );
+    else
+     mapholder.innerHTML = "Geolocation is not supported by this browser.";
+   }
+ 
+   function  showPosition( position ) {
+    var  latlon   = position.coords.latitude + ",";
+         latlon  += position.coords.longitude;
+    var  img_url  = "http://maps.googleapis.com/maps/api/staticmap?center=";
+         img_url += latlon + "&zoom=14&size=400x300&sensor=false";
+    mapholder.innerHTML = "<img src=" + img_url + ">";
+   }
+  </script>
+ </body>
+</html>
+
