@@ -31,3 +31,23 @@ h1 {
 	float: left;
 }
 
+input[type=file] {
+	font-family: daniel;
+	font-size: 15px;
+}
+
+#upload {
+	border: 2px solid white;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	float: left;
+}
+
+input[type=submit] {
+    font-family: daniel;
+    color: rgb(0, 137, 123);
+    text-align: right !important;
+    border: 2px solid #80CBC4;
+    background: rgba(0, 0, 0, 0.0);
+	font-size: 15px;
+}
