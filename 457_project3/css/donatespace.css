@@ -16,31 +16,24 @@ h1 {
 	color: white;
 }
 
-#page {
-	color: rgb(0, 137, 123);
-    -webkit-border-radius: 10px;
-    padding: 20px;
-	width: auto;
-	height: auto;
-}
-
 #typeofspace {
+	padding: 20px;
+	font-family: daniel;
+	font-size: 15px;	
+	color: rgb(0, 137, 123);
 	border: 2px solid white;
-	padding:10px;
 	-webkit-border-radius: 10px;
-	float: left;
+	vertical-align: middle;
+	position: absolute;
+	box-sizing: border-box;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: 100px;
 }
 
 input[type=file] {
 	font-family: daniel;
 	font-size: 15px;
-}
-
-#upload {
-	border: 2px solid white;
-	padding: 10px;
-	-webkit-border-radius: 10px;
-	float: left;
 }
 
 input[type=submit] {

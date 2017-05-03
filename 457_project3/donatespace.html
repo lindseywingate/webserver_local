@@ -10,10 +10,10 @@
 	<h1>Donate Space</h1>
 	<div id="page">
 		<div id="typeofspace">
-			<p>I am a...</p>
-			<form action="">
-				<input type="radio" name="hotel">Hotel<br>
-				<input type="radio" name="homeowner">Home Owner<br><br>
+			<p>I am offering...</p>
+			<form>
+				<input type="radio" name="type" value="hotel"> at a Hotel<br>
+				<input type="radio" name="type" value="homeowner"> at a  Home<br>
 			<p>What spaces can you offer?</p>
 				<input type="checkbox" name="bedroom" value="bedroom" id="bedroom" onclick="bedrooms()">Bedroom</br>
 				<div id="bedrooms">
@@ -26,15 +26,12 @@
 				</div>
 				<input type="checkbox" name="house" value="house" id="house" onclick="housebedrooms()">Entire House</br>
 				<div id="houserooms">
-				</div>
-				<input type="submit">
+			<!--				<p>Select images to upload. Please include a picture of each room to be donated.</p>
+					<input type="file" name="images" id="images" multiple/><br><br>-->
+				<input type="submit" name="submit" value="Submit Application">
 			</form>
-		</div>
-		<div id="upload">
-			<form action="upload.php" method="post" enctype="multipart/form-data">
-		    <p>Select images to upload:</p>
-			    <input type="file" name="images" id="images" multiple/><br><br>
-				<input type="submit" name="submit">
+				<div id="thankyou">
+				</div>
 			</form>
 		</div>
 	</div><!--page-->	
