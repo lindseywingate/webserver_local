@@ -10,10 +10,17 @@
 	<h1>Donate Space</h1>
 	<div id="page">
 		<div id="typeofspace">
-			<p>Please select one:</p>
+			<p>I am a...</p>
 			<form action="">
-				<input type="checkbox" name="bedroom" value="bedroom">Bedroom</br>
-				<input type="checkbox" name="masterbed" value="masterbed" >Bedroom with attached bathroom</br>
+				<input type="radio" name="hotel">Hotel</br>
+				<input type="radio" name="homeowner">Home Owner</br>
+			<p>What spaces can you offer?</p>
+				<input type="checkbox" name="bedroom" value="bedroom" id="bedroom" onclick="bedrooms()">Bedroom</br>
+				<div id="bedrooms">
+				</div>
+				<input type="checkbox" name="masterbed" value="masterbed" id="masterbed" onclick="bedroomsandbathrooms()">Bedroom with attached bathroom</br>
+				<div id="masterbeds">
+				</div>
 				<input type="checkbox" name="apartment" value="apartment" id="apartment" onclick="aptbedrooms()">Entire Apartment</br>
 				<div id="aptrooms">
 				</div>
@@ -21,6 +28,7 @@
 				<div id="houserooms">
 				</div>
 				<input type="submit">
+			</form>
 		</div>
 	</div><!--page-->	
 
