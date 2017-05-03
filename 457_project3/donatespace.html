@@ -2,8 +2,9 @@
 
 <html>
 <head>
-	<script type="text/javascript" src="js/donatespace.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<link href="css/donatespace.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/donatespace.js"></script>
 </head>
 <body>
 	<h1>Donate Space</h1>
@@ -12,12 +13,12 @@
 			<p>Please select one:</p>
 			<form action="">
 				<input type="checkbox" name="bedroom" value="bedroom">Bedroom</br>
-				<input type="checkbox" name="masterbed" value="masterbed">Bedroom with attached bathroom</br>
-				<input type="checkbox" name="apartment" value="apartment" onClick="aptbedrooms()">Entire Apartment</br>
-				<div id="aptbedrooms">
+				<input type="checkbox" name="masterbed" value="masterbed" >Bedroom with attached bathroom</br>
+				<input type="checkbox" name="apartment" value="apartment" id="apartment" onclick="aptbedrooms()">Entire Apartment</br>
+				<div id="aptrooms">
 				</div>
-				<input type="checkbox" name="house" value="house" onClick="housebedrooms()">Entire House</br>
-				<div id="housebedrooms">
+				<input type="checkbox" name="house" value="house" id="house" onclick="housebedrooms()">Entire House</br>
+				<div id="houserooms">
 				</div>
 				<input type="submit">
 		</div>
