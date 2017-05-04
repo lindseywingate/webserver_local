@@ -12,7 +12,7 @@ function getlocation() {
 }
 
 function showError() {
-	alert("Why isn't this working...");
+	alert("Geolocation (the map application) does not work on insecure sites.");
 }
 
 function initialize(position) {
