@@ -49,6 +49,7 @@ p {
 }
 
 #login_stuff {
+	color: white;
 	text: 30px;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -64,12 +65,13 @@ input[type=text], input[type=password] {
 	border: 2px solid #80CBC4;
 	-webkit-border-radius: 5px;
 	background: rgba(0, 0, 0, 0.0);
-	color: black;
+	color: #80CBC4;
+	font-family: daniel;
 }
 
 input[type=submit] {
 	font-family: daniel;
-	color: #80CBC4;
+	color: white;
 	text-align: right !important;
 	font-size: 20px;
 	border: 2px solid #80CBC4;

@@ -16,6 +16,7 @@ $conn=mysql_connect($host, $username, $password);
 
 if($conn) {
 	echo "Successfully connected to MySQL!";
+	mysql_select_db($conn, "lindseywingate");
 	$query = "SELECT username, password from users WHERE username='$user' AND password='$pass'";
 	$result = mysql_query($query);
 	$count = mysql_num_rows($result);
